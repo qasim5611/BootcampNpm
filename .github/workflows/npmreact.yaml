@@ -28,7 +28,7 @@ jobs:
       with:
         node-version: 12
     
-    - uses: borales/actions-yarn@v2.0.0
+    - uses: borales/actions-yarn@v2.1.0
       with:
         cmd: install # will run `yarn install` command
         
@@ -39,4 +39,4 @@ jobs:
       run: npm install -g surge
  
     - name: Deploy to Surge
-      run: surge ./build npmreact_bootcamp.surge.sh --token ${{ secrets.QASIM_TOKEN }}
+      run: surge ./build npmjs_bootcampreact.surge.sh --token ${{ secrets.QASIM_TOKEN }}
